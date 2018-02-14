@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect("mongodb://localhost:27017", function(err, client){
+MongoClient.connect("mongodb://east17:12345@ds233238.mlab.com:33238/words", function(err, client){
   if(err){
     console.log(err)
     return;
@@ -9,9 +9,9 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
   const db = client.db('data');
 
 
-  db.collection('words').drop();
-  db.collection('maths').drop();
-  db.collection('flags').drop();
+  // db.collection('words').drop();
+  // db.collection('maths').drop();
+  // db.collection('flags').drop();
 
 
   db.collection('words').insert([
@@ -555,11 +555,7 @@ db.collection('maths').insert([
       name:'slovakia',
       coords: { lat: 48.069026, lng: 19.699024 },
       zoom: 5,
-<<<<<<< HEAD
-      image: "/images/flags/.svg"
-=======
       image: "/images/flags/slovakia.svg"
->>>>>>> 34d990e33230cf544acbb095d6a1324b59246d9c
     },
     {
       name:'usa',
@@ -572,16 +568,6 @@ db.collection('maths').insert([
       coords: { lat: 52.380661, lng: -3.783712 },
       zoom: 6,
       image: "/images/flags/wales.svg"
-<<<<<<< HEAD
-    },
-=======
     }
-<<<<<<< HEAD
->>>>>>> 34d990e33230cf544acbb095d6a1324b59246d9c
-
-
-
-=======
->>>>>>> ddedccda699ac0fc8e497c62d2fe61d97d637e25
   ])
 });

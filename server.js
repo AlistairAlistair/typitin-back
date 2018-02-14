@@ -10,7 +10,7 @@ server.use(bodyParser.urlencoded({extended:true}));
 server.use(cors());
 
 
-MongoClient.connect("mongodb://east17:12345@ds233238.mlab.com:33238/words", function(err, client){
+MongoClient.connect("mongodb://east17:12345@ds235328.mlab.com:35328/data", function(err, client){
   if(err){
     console.log(err)
     return;
@@ -43,7 +43,7 @@ MongoClient.connect("mongodb://east17:12345@ds233238.mlab.com:33238/words", func
   })
 
 
-  server.listen(5000, function(){
+  server.listen(process.env.PORT || 5000, function(){
     console.log("Typit Backend running on port: " + this.address().port);
   });
 
