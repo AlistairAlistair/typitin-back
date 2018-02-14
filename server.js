@@ -10,7 +10,7 @@ server.use(bodyParser.urlencoded({extended:true}));
 server.use(cors());
 
 
-MongoClient.connect("mongodb://east17:12345@ds235328.mlab.com:35328", function(err, client){
+MongoClient.connect("mongodb://east17:12345@ds235328.mlab.com:35328/data", function(err, client){
   if(err){
     console.log(err)
     return;
